@@ -33,7 +33,7 @@ $ grunt unit
 $ grunt unit:single
 ```
 
-## Unit testing (end to end)
+## End to end testing
 
 ```
 $ grunt e2e
