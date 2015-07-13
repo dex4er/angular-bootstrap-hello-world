@@ -1,0 +1,17 @@
+<div class="container" ng-controller="HomeController as ctrl">
+  <form name="ctrl.form" novalidate="novalidate" ng-submit="ctrl.submit()">
+
+    <div class="starter-template">
+      <h1 class="title">Angular+Bootstrap Hello World</h1>
+      <p class="lead">Use this project as a way to quickly start any new project.</p>
+    </div>
+
+    <div class="form-group">
+      <label>Enter your name:</label>
+      <input form="ctrl.form" placeholder="World" name="name" ng-model="ctrl.greeting.name" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-default">Submit</button>
+
+  </form>
+</div>
