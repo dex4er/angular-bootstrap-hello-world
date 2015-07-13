@@ -1,5 +1,5 @@
-This is template for Ionic application with karma+mocha-chai unit tests and
-webdriverio e2e tests.
+This is template for Angular+Bootstrap application with karma+mocha-chai unit
+tests and webdriverio e2e tests.
 
 ## Preparing node
 
