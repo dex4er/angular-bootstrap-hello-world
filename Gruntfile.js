@@ -280,6 +280,12 @@ module.exports = function (grunt) {
         dest: '.temp/<%= project.styles %>/',
         src: '{,*/}*.css'
       },
+      fonts: {
+        expand: true,
+        cwd: '<%= project.app %>/bower_components/bootstrap-sass/assets/fonts/bootstrap/',
+        dest: '<%= project.dist %>/fonts/bootstrap/',
+        src: '*'
+      },
       vendor: {
         expand: true,
         cwd: '<%= project.app %>/vendor',
@@ -310,17 +316,20 @@ module.exports = function (grunt) {
         'ngtemplates:app',
         'copy:styles',
         'copy:vendor',
+        'copy:fonts'
       ],
       test: [
         'compass',
         'ngtemplates:app',
         'copy:styles',
         'copy:vendor',
+        'copy:fonts'
       ],
       dist: [
         'compass:dist',
         'copy:styles',
         'copy:vendor',
+        'copy:fonts'
       ]
     },
 
