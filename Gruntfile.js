@@ -122,12 +122,13 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         '<%= project.app %>/<%= project.scripts %>/**/*.js',
+        '!**/*.spec.js',
       ],
       test: {
         options: {
-          jshintrc: 'test/.jshintrc'
+          jshintrc: '.jshintrc-tests'
         },
-        src: ['test/**/*.js']
+        src: ['<%= project.app %>/<%= project.scripts %>/**/*.spec.js', 'e2e/**/*.js']
       }
     },
 
@@ -376,7 +377,7 @@ module.exports = function (grunt) {
           ]
         }
       },
-      unit: {
+      spec: {
         singleRun: false,
         background: true,
         reporters: ['dots']
@@ -481,8 +482,8 @@ module.exports = function (grunt) {
   // we don't have to run the karma test server as part of `grunt serve`
   grunt.registerTask('watch:karma', function () {
     var karma = {
-      files: ['<%= project.app %>/<%= project.scripts %>/**/*.js', '<%= project.test %>/unit/**/*.js'],
-      tasks: ['newer:jshint:test', 'karma:unit:run']
+      files: ['<%= project.app %>/<%= project.scripts %>/**/*.js'],
+      tasks: ['newer:jshint:test', 'karma:spec:run']
     };
     grunt.config.set('watch', karma);
     return grunt.task.run(['watch']);
@@ -510,7 +511,7 @@ module.exports = function (grunt) {
     'selenium_standalone:e2e:stop'
   ]);
 
-  grunt.registerTask('unit:single', [
+  grunt.registerTask('spec:single', [
     'wiredep',
     'clean',
     'concurrent:test',
@@ -518,9 +519,9 @@ module.exports = function (grunt) {
     'karma:continuous',
   ]);
 
-  grunt.registerTask('unit', [
-    'unit:single',
-    'karma:unit:start',
+  grunt.registerTask('spec', [
+    'spec:single',
+    'karma:spec:start',
     'watch:karma'
   ]);
 

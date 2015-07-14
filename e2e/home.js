@@ -1,4 +1,4 @@
-'no strict';
+'use strict';
 
 describe('/', function() {
   it('should load main page', function() {

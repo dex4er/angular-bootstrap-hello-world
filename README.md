@@ -1,4 +1,4 @@
-This is template for Angular+Bootstrap application with karma+mocha-chai unit
+This is template for Angular+Bootstrap application with karma+mocha-chai spec
 tests and webdriverio e2e tests.
 
 ## Preparing node
@@ -21,16 +21,16 @@ $ node install
 $ bower install
 ```
 
-## Unit testing (constantly)
+## Spec testing (constantly)
 
 ```
-$ grunt unit
+$ grunt spec
 ```
 
-## Unit testing (single run)
+## Spec testing (single run)
 
 ```
-$ grunt unit:single
+$ grunt spec:single
 ```
 
 ## End to end testing

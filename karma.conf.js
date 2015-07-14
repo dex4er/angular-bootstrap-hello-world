@@ -24,7 +24,6 @@ module.exports = function(config) {
     })).concat([
         'app/scripts/**/*.js',
         'app/templates/**/*.js',
-        'test/unit/**/*.js'
     ]),
 
 
