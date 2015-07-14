@@ -180,9 +180,11 @@ module.exports = function (grunt) {
         generatedImagesDir: '.temp/<%= project.images %>/generated',
         imagesDir: '<%= project.app %>/<%= project.images %>',
         javascriptsDir: '<%= project.app %>/<%= project.scripts %>',
+        fontsDir: '<%= project.app %>/<%= project.styles %>/fonts',
         importPath: '<%= project.app %>/bower_components',
         httpImagesPath: '/<%= project.images %>',
         httpGeneratedImagesPath: '/<%= project.images %>/generated',
+        httpFontsPath: '/<%= project.styles %>/fonts',
         relativeAssets: false,
         assetCacheBuster: false,
         raw: 'Sass::Script::Number.precision = 10\n'
