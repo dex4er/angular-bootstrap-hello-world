@@ -1,0 +1,7 @@
+<div class="container" ng-controller="GreetingController as vm">
+  <h1>Hello, {{vm.greeting.name|default:"Anonymous"}}</h1>
+  <form name="vm.form" novalidate="novalidate" ng-submit="vm.submit()">
+  <a ui-sref="home({back:true})" class="btn btn-default">Back</a>
+  <button type="submit" class="btn btn-default">Forward</button>
+  </form>
+</div>

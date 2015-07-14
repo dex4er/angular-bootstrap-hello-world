@@ -5,7 +5,7 @@ angular.module('angularBootstrapHelloWorldApp')
   $stateProvider
   .state('greeting', {
     url: '/greeting',
-    templateUrl: 'scripts/states/greeting.html',
+    templateUrl: 'scripts/pages/greeting.html',
     cache: false
   });
 });

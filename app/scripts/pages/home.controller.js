@@ -2,20 +2,20 @@
 
 angular.module('angularBootstrapHelloWorldApp')
 .controller('HomeController', function($log, $state, $stateParams, greeting) {
-  var ctrl = this;
+  var vm = this;
 
   $log.debug('HomeController');
 
-  ctrl.greeting = greeting;
+  vm.greeting = greeting;
 
   if (! $stateParams.back) {
     greeting.name = null;
   }
 
-  ctrl.submit = function() {
+  vm.submit = function() {
     $log.debug('HomeController.submit');
 
-    if (ctrl.form.$valid) {
+    if (vm.form.$valid) {
       $state.go('greeting');
     }
   };

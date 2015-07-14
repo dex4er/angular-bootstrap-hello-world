@@ -4,11 +4,11 @@ angular.module('angularBootstrapHelloWorldApp')
 .controller('GreetingController', function($log, $state, greeting) {
   $log.debug('GreetingController');
 
-  var ctrl = this;
+  var vm = this;
 
-  ctrl.greeting = greeting;
+  vm.greeting = greeting;
 
-  ctrl.submit = function() {
+  vm.submit = function() {
     $log.debug('GreetingController.submit');
     $state.go('home');
   };

@@ -6,7 +6,7 @@ angular.module('angularBootstrapHelloWorldApp')
   $stateProvider
   .state('home', {
     url: '/home?back',
-    templateUrl: 'scripts/states/home.html',
+    templateUrl: 'scripts/pages/home.html',
     cache: false
   });
 });
