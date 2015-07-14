@@ -22,7 +22,7 @@ module.exports = function (grunt) {
       styles: 'styles',
       images: 'images',
       test: 'test',
-      dist: 'www',
+      dist: 'www'
     },
 
     // Environment Variables for Angular App
