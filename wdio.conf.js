@@ -7,7 +7,7 @@ exports.config = {
   // Define which test specs should run. The pattern is relative to the location of this
   // file.
   //
-  specs : [ 'e2e/**/*.js' ],
+  specs : [ 'e2e/**/*_spec.js' ],
 
   // Patterns to exclude.
   exclude : [
