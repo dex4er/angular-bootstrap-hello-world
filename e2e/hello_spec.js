@@ -1,6 +1,6 @@
 'use strict';
 
-it('should load main page', function() {
+it("should load main page", function() {
   return browser
     .url('/')
     .waitForVisible('#todoapp')
@@ -8,7 +8,7 @@ it('should load main page', function() {
       .should.eventually.match(/Hello World/);
 });
 
-it('should add new todo', function() {
+it("should add new todo", function() {
   return browser
     .url('/')
     .waitThenClick('#new-todo')
@@ -18,7 +18,7 @@ it('should add new todo', function() {
       .should.eventually.be.ok;
 });
 
-it('should show active todos after click', function() {
+it("should show active todos after click", function() {
   return browser
     .url('/')
     .waitThenClick('a[ui-sref="active"]')
