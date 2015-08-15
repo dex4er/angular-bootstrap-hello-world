@@ -112,12 +112,15 @@ exports.config = {
   // Gets executed before test execution begins. At this point you will have access to all global
   // variables like `browser`. It is the perfect place to define custom commands.
   before : function() {
-    // do something
     var chai = require('chai');
     var chaiAsPromised = require('chai-as-promised');
     chai.Should();
     chai.use(chaiAsPromised);
     chaiAsPromised.transferPromiseness = browser.transferPromiseness;
+
+    browser.addCommand('waitThenClick', function(selector) {
+      return this.waitForVisible(selector).click(selector);
+    });
   },
 
   //

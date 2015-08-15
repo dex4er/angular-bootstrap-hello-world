@@ -13,8 +13,7 @@ it('should load main page', function() {
 it('should add new todo', function() {
   return browser
     .url('/')
-    .waitForVisible('#new-todo')
-    .click('#new-todo')
+    .waitThenClick('#new-todo')
     .keys('blabla' + webdriver.Key.ENTER)
     .waitForVisible('input.edit')
       .should.eventually.be.ok;
@@ -23,8 +22,7 @@ it('should add new todo', function() {
 it('should show active todos after click', function() {
   return browser
     .url('/')
-    .waitForVisible('a[ui-sref="active"]')
-    .click('a[ui-sref="active"]')
+    .waitThenClick('a[ui-sref="active"]')
     .waitForVisible('a.selected[ui-sref="active"]')
     .url()
       .should.eventually.have.property('value')
