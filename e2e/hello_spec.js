@@ -1,7 +1,5 @@
 'use strict';
 
-var webdriver = require('selenium-webdriver');
-
 it('should load main page', function() {
   return browser
     .url('/')
@@ -14,7 +12,8 @@ it('should add new todo', function() {
   return browser
     .url('/')
     .waitThenClick('#new-todo')
-    .keys('blabla' + webdriver.Key.ENTER)
+    .keys('blabla')
+    .keys('Enter')
     .waitForVisible('input.edit')
       .should.eventually.be.ok;
 });
